@@ -3,6 +3,44 @@
   const root = document.getElementById('aura');
   if (!root || root.dataset.initialized) return;
   root.dataset.initialized = 'true';
+  // Anima somente elementos abaixo da dobra, com conteúdo acessível sem JavaScript.
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  if ('IntersectionObserver' in window && !reducedMotion.matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('is-waiting');
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.08});
+    root.querySelectorAll('.aura-intro>div,.aura-gallery button,.aura-space-list article,.aura-leisure>*,.aura-brands>div,.aura-experience,.aura-location>div,.aura-faq details,.aura-contact-grid>div').forEach(element => {
+      element.classList.add('aura-reveal');
+      if (element.getBoundingClientRect().top > innerHeight) {
+        element.classList.add('is-waiting');
+        observer.observe(element);
+      }
+    });
+    reducedMotion.addEventListener('change', () => {
+      if (reducedMotion.matches) {
+        observer.disconnect();
+        root.querySelectorAll('.is-waiting').forEach(element => element.classList.remove('is-waiting'));
+      }
+    });
+  }
+  const progress = root.querySelector('.aura-progress');
+  let framePending = false;
+  const updateProgress = () => {
+    const distance = document.documentElement.scrollHeight - innerHeight;
+    if (progress) progress.style.transform = `scaleX(${distance > 0 ? Math.min(1, Math.max(0, scrollY / distance)) : 0})`;
+    framePending = false;
+  };
+  addEventListener('scroll', () => {
+    if (!framePending) { framePending = true; requestAnimationFrame(updateProgress); }
+  }, {passive:true});
+  addEventListener('resize', updateProgress);
+  updateProgress();
   const slot = root.querySelector('#aura-native-form-slot');
   const nativeForm = document.querySelector('.aura-native-form');
   if (nativeForm && slot && !slot.contains(nativeForm)) slot.replaceChildren(nativeForm);

@@ -1,0 +1,72 @@
+/* Direção editorial: arquitetura, materiais naturais e movimento discreto. */
+#aura{--sand:#e9e1d4;--ink:#292e29;--bronze:#9a7956;background:#faf8f4;color:var(--ink)}
+#aura h1,#aura h2,#aura .aura-price{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400}
+#aura h2{font-size:clamp(42px,4.8vw,72px);letter-spacing:-.045em;line-height:1.02}
+#aura .aura-eyebrow{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:.2em}
+#aura .aura-eyebrow::before{content:'';display:block;width:28px;height:1px;background:currentColor;opacity:.6}
+#aura .aura-nav{height:88px;background:#faf8f4;max-width:none;padding-inline:5vw;border-bottom:1px solid #d6ccbd}
+#aura .aura-logo{width:78px;max-height:68px;object-fit:contain}
+#aura .aura-btn{transition:background .25s,transform .25s,box-shadow .25s;background:var(--ink);border-color:var(--ink);padding:17px 28px}
+#aura .aura-btn:hover{transform:translateY(-3px);box-shadow:0 9px 24px #292e2920;background:#4b5749}
+#aura .aura-btn-outline{background:transparent}
+#aura .aura-arrow{transition:transform .25s}#aura .aura-btn:hover .aura-arrow{transform:translate(3px,-3px)}
+#aura .aura-hero{position:relative;grid-template-columns:55% 45%;background:#e9e1d4;min-height:750px;padding:38px 5vw 48px;gap:3vw;overflow:hidden}
+#aura .aura-hero::before{content:'A';position:absolute;left:18%;top:-140px;font:900px/1 'Cormorant Garamond',Georgia,serif;color:#fff3;pointer-events:none}
+#aura .aura-hero-copy{padding:38px 0;position:relative;z-index:1}
+#aura .aura-hero h1{font-size:clamp(96px,11vw,174px);line-height:.76;letter-spacing:-.065em;margin:44px 0 34px}
+#aura .aura-hero h1 span{display:inline}#aura .aura-hero h1 span+span{display:block;font-style:italic;padding-left:11%}
+#aura .aura-hero-description{font-size:16px;line-height:1.9;max-width:370px}
+#aura .aura-hero-media{align-self:center;justify-self:center;width:100%;max-width:390px;border-radius:180px 180px 12px 12px;overflow:hidden;box-shadow:0 24px 60px #292e292e;background:#252925;border:7px solid #f7f3ec}
+#aura .aura-hero-video{height:auto;max-height:none;aspect-ratio:9/16;width:100%;object-fit:contain}
+#aura .aura-hero-media .aura-image-label{top:36px;right:50%;transform:translateX(50%);white-space:nowrap;background:#faf8f4dd;font-size:8px}
+#aura .aura-ref{font-size:9px;line-height:2.1;letter-spacing:.12em;border-top:1px solid #c9bcaa;padding-top:22px;margin-top:30px;width:min(100%,390px)}
+#aura .aura-facts{padding-block:42px}#aura .aura-fact strong{font-family:'Cormorant Garamond',Georgia,serif;font-size:42px}
+#aura .aura-section{padding-block:110px}#aura .aura-intro{gap:70px;align-items:center}
+#aura .aura-credits{padding-top:24px}#aura .aura-prose{line-height:1.9}
+#aura .aura-gallery{gap:22px}#aura .aura-gallery figure{position:relative;overflow:hidden;border-radius:4px}
+#aura .aura-gallery img{transition:transform .7s,filter .7s}
+#aura .aura-gallery button:hover img{transform:scale(1.04);filter:brightness(.85)}
+#aura .aura-gallery figcaption{position:absolute;bottom:0;left:0;width:100%;padding:45px 18px 20px;color:white;background:linear-gradient(transparent,#0009);font-size:12px}
+#aura .aura-dark{background:#29372f;background-image:radial-gradient(ellipse at top right,#65725b44,transparent 65%)}
+#aura .aura-space-list article{padding:26px;border:1px solid #ffffff26;border-radius:2px;transition:background .3s,transform .3s}
+#aura .aura-space-list article:hover{background:#ffffff09;transform:translateY(-4px)}
+#aura .aura-space-list small{color:#d9bd94}#aura .aura-space-list h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px}
+#aura .aura-leisure-photo{border-radius:240px 240px 4px 4px;height:650px}
+#aura .aura-brands{border:0;gap:12px}#aura .aura-brands div{border:1px solid #c8baa7;padding:24px;background:#ffffff25;transition:background .3s}#aura .aura-brands div:hover{background:#ffffff70}
+#aura .aura-experiences{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
+#aura .aura-experience{position:relative;min-height:520px;overflow:hidden;border-radius:3px}
+#aura .aura-experience img{width:100%;height:100%;position:absolute;object-fit:cover;transition:transform .8s}
+#aura .aura-experience:hover img{transform:scale(1.04)}
+#aura .aura-experience div{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;color:#fff;background:linear-gradient(transparent 30%,#17221bcb)}
+#aura .aura-experience h3{font:40px/1.1 'Cormorant Garamond',Georgia,serif;margin:12px 0}#aura .aura-experience p{font-size:12px;max-width:330px;line-height:1.8}
+#aura .aura-location{border-top:1px solid #d9cebf;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+#aura .aura-location-card{border:1px solid #cbbda9;padding:42px;background:#eee7dc;position:relative}
+#aura .aura-location-card strong{font:100px/1 'Cormorant Garamond',Georgia,serif;display:block;color:#917658;margin:20px 0}
+#aura .aura-location-card p{font-size:13px;line-height:1.9}#aura .aura-text-link{display:inline-block;border-bottom:1px solid;margin-top:24px;padding-bottom:5px;font-size:12px}
+#aura .aura-faq{max-width:940px}#aura .aura-faq h2{margin:20px 0 40px}#aura details{border-bottom:1px solid #d6ccbd;padding:23px 0}
+#aura summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:24px;font-size:14px;font-weight:500}#aura summary::-webkit-details-marker{display:none}#aura summary::after{content:'+';font-size:23px;color:#9a7956;line-height:1}#aura details[open] summary::after{content:'−'}#aura details p{font-size:13px;color:#686868;line-height:1.9;padding-top:18px;max-width:700px}
+#aura .aura-contact{background:#29372f;color:#f8f4ed}#aura .aura-contact .aura-terms{color:#d6cbbd}#aura .aura-price{font-size:52px}#aura .aura-form-panel{color:var(--ink);border:0;padding:42px;box-shadow:12px 12px 0 #ffffff0d}
+#aura .aura-form-panel h3{font:34px/1.1 'Cormorant Garamond',Georgia,serif}
+#aura .aura-native-form input:focus{outline:2px solid #9a7956;outline-offset:2px}#aura .aura-native-form [type=submit]{transition:background .3s,transform .3s}#aura .aura-native-form [type=submit]:hover{transform:translateY(-2px)}
+#aura .aura-progress{position:fixed;top:0;left:0;height:3px;background:#b8926e;width:100%;transform:scaleX(0);transform-origin:left;z-index:200;pointer-events:none}
+#aura .aura-reveal{opacity:1;transform:none}#aura .aura-reveal.is-waiting{opacity:0;transform:translateY(26px)}#aura .aura-reveal.is-visible{opacity:1;transform:none;transition:opacity .75s ease,transform .75s ease}
+@media(min-width:768px){#aura .aura-hero-copy{animation:aura-enter .8s both}#aura .aura-hero-media{animation:aura-enter 1s .1s both}}
+@keyframes aura-enter{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media(max-width:1100px){#aura .aura-hero{min-height:0}#aura .aura-space-list article{padding:18px}#aura .aura-space-list{gap:16px}#aura .aura-wrap{padding-inline:30px}}
+@media(max-width:767px){
+ #aura .aura-nav{height:70px;padding-inline:20px}#aura .aura-logo{width:62px;max-height:55px}#aura .aura-nav .aura-btn{font-size:9px;padding:10px 15px}
+ #aura .aura-hero{padding:22px 20px 36px;gap:0}#aura .aura-hero::before{font-size:620px;left:-120px;top:160px}
+ #aura .aura-hero-media{order:-1;max-width:310px;border-width:5px;border-radius:140px 140px 8px 8px;margin:0 auto;max-height:60svh}
+ #aura .aura-hero-video{height:59svh;min-height:0;max-height:550px;object-fit:contain}#aura .aura-hero-copy{padding:30px 0 0;align-items:center;text-align:center}
+ #aura .aura-hero h1{font-size:clamp(72px,23vw,110px);margin:27px 0 22px;line-height:.85}#aura .aura-hero h1 span+span{display:inline;padding:0}#aura .aura-hero h1 span+span::before{content:' '}
+ #aura .aura-hero-description{font-size:13px}#aura .aura-hero .aura-btn{margin-top:23px}#aura .aura-ref{font-size:8px;margin-top:24px}
+ #aura .aura-wrap{padding-inline:22px}#aura .aura-section{padding-block:68px}#aura h2{font-size:44px}#aura .aura-eyebrow{font-size:9px;letter-spacing:.14em}
+ #aura .aura-facts{gap:28px 0;padding-block:30px}#aura .aura-fact strong{font-size:34px}#aura .aura-intro{gap:28px}
+ #aura .aura-gallery{gap:14px}#aura .aura-gallery .aura-gallery-tall img{height:450px}#aura .aura-gallery img{height:290px}#aura .aura-gallery figcaption{font-size:9px;padding:35px 12px 15px}
+ #aura .aura-space-list{grid-template-columns:1fr;gap:12px}#aura .aura-space-list article{padding:25px}#aura .aura-space-list h3{font-size:30px}
+ #aura .aura-leisure-photo{height:480px}#aura .aura-brands{gap:10px}#aura .aura-brands div{padding:19px 14px}#aura .aura-brands span{font-size:16px}#aura .aura-brands small{font-size:8px}
+ #aura .aura-experiences{grid-template-columns:1fr;gap:18px;margin-top:28px}#aura .aura-experience{min-height:440px}#aura .aura-experience div{padding:25px}#aura .aura-experience h3{font-size:36px}
+ #aura .aura-location{grid-template-columns:1fr;gap:30px}#aura .aura-location-card{padding:28px}#aura .aura-location-card strong{font-size:80px}
+ #aura .aura-price{font-size:43px}#aura .aura-form-panel{padding:28px 22px;box-shadow:none}#aura .aura-contact-grid{gap:38px}#aura .aura-mobile-cta{box-shadow:0 -8px 35px #292e2912}
+}
+@media(prefers-reduced-motion:reduce){#aura *,#aura *::before,#aura *::after{animation:none!important;transition:none!important}#aura .aura-reveal.is-waiting{opacity:1;transform:none}}
