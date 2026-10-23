@@ -3,6 +3,27 @@
   const root = document.getElementById('aura');
   if (!root || root.dataset.initialized) return;
   root.dataset.initialized = 'true';
+  const menu = root.querySelector('#aura-menu');
+  const menuToggle = root.querySelector('.aura-menu-toggle');
+  if (menu && menuToggle) {
+    const closeMenu = () => { if (menu.open) menu.close(); };
+    menuToggle.addEventListener('click', () => {
+      menu.showModal();
+      menuToggle.setAttribute('aria-expanded', 'true');
+      document.documentElement.classList.add('aura-menu-open');
+    });
+    menu.querySelector('.aura-menu-close').addEventListener('click', closeMenu);
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    menu.addEventListener('click', event => {
+      const bounds = menu.getBoundingClientRect();
+      if (event.target === menu && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) closeMenu();
+    });
+    menu.addEventListener('close', () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.documentElement.classList.remove('aura-menu-open');
+    });
+    matchMedia('(min-width:768px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+  }
   // Anima somente elementos abaixo da dobra, com conteúdo acessível sem JavaScript.
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   if ('IntersectionObserver' in window && !reducedMotion.matches) {

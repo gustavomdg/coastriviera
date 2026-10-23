@@ -9,16 +9,228 @@
 <link rel="stylesheet" href="aura.css"><link rel="stylesheet" href="editorial.css"><style>body{margin:0}html{scroll-behavior:smooth}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style></head><body>
 <div id="aura">
   <header class="aura-wrap aura-nav">
-    <a href="#aura" aria-label="COAST Riviera Imóveis — início"><img class="aura-logo" src="assets/coast-logo.png" width="104" height="80" alt="COAST Riviera Imóveis"></a>
-    <nav class="aura-navlinks" aria-label="Navegação da Casa Aura"><a href="#aura-residencia">A residência</a><a href="#aura-ambientes">Ambientes</a><a href="#aura-filme">O filme</a><a class="aura-btn aura-btn-outline" href="#aura-contato">Agendar uma visita <span class="aura-arrow" aria-hidden="true">↗</span></a></nav>
+    <a class="aura-brand" href="#aura" aria-label="COAST Riviera Imóveis — início"><img class="aura-logo" src="assets/coast-logo.png" width="78" height="68" alt="COAST Riviera Imóveis"><span>CASA AURA<small>RIVIERA · MÓDULO 21</small></span></a>
+    <nav class="aura-navlinks" aria-label="Navegação da Casa Aura"><a href="#aura-residencia">A residência</a><a href="#aura-ambientes">Ambientes</a><a href="#aura-localizacao">Localização</a><a href="#aura-filme">O filme</a></nav>
+    <div class="aura-nav-actions"><a class="aura-btn aura-btn-outline aura-nav-visit" href="#aura-contato"><svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 2v3" />
+  <path d="M16 2v3" />
+  <rect x="3" y="3" width="18" height="18" rx="2" />
+  <path d="M3 9h18" />
+  <path d="M8 13h.01" />
+  <path d="M12 13h.01" />
+  <path d="M16 13h.01" />
+  <path d="M8 17h.01" />
+  <path d="M12 17h.01" />
+  <path d="M16 17h.01" />
+</svg>
+<span>Agendar visita</span></a><button class="aura-menu-toggle" type="button" aria-label="Abrir menu" aria-haspopup="dialog" aria-controls="aura-menu" aria-expanded="false"><svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 5h16" />
+  <path d="M4 12h16" />
+  <path d="M4 19h16" />
+</svg>
+</button></div>
   </header>
+  <dialog id="aura-menu" class="aura-menu-panel" aria-labelledby="aura-menu-title"><div class="aura-menu-top"><p id="aura-menu-title">Explore a Casa Aura</p><button class="aura-menu-close" type="button" aria-label="Fechar menu"><svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg>
+</button></div><nav aria-label="Menu para celular"><a href="#aura-residencia"><small>01</small>A residência<svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+</svg>
+</a><a href="#aura-ambientes"><small>02</small>Ambientes<svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+  <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+  <path d="M12 4v6" />
+  <path d="M2 18h20" />
+</svg>
+</a><a href="#aura-localizacao"><small>03</small>Localização<svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+  <circle cx="12" cy="10" r="3" />
+</svg>
+</a><a href="#aura-filme"><small>04</small>O filme<svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg>
+</a></nav><a class="aura-btn" href="#aura-contato">Agendar minha visita<svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 2v3" />
+  <path d="M16 2v3" />
+  <rect x="3" y="3" width="18" height="18" rx="2" />
+  <path d="M3 9h18" />
+  <path d="M8 13h.01" />
+  <path d="M12 13h.01" />
+  <path d="M16 13h.01" />
+  <path d="M8 17h.01" />
+  <path d="M12 17h.01" />
+  <path d="M16 17h.01" />
+</svg>
+</a><p class="aura-menu-note">Casa Aura · 21E17<br>Riviera de São Lourenço, Bertioga/SP</p></dialog>
   <div class="aura-progress" aria-hidden="true"></div>
   <main>
     <section class="aura-hero" aria-labelledby="aura-title">
-      <div class="aura-hero-copy"><p class="aura-eyebrow">COAST apresenta · Residência à venda</p><h1 id="aura-title"><span>Casa</span><span>Aura.</span></h1><p class="aura-hero-description">Arquitetura que acolhe.<br>Espaços para viver por inteiro.</p><a class="aura-btn" href="#aura-contato">Conhecer a Casa Aura <span class="aura-arrow" aria-hidden="true">↗</span></a><p class="aura-ref">5 SUÍTES &nbsp; / &nbsp; 404,51 M² CONSTRUÍDOS<br>RIVIERA MÓDULO 21 · BERTIOGA/SP<br>REFERÊNCIA 21E17 · CÓDIGO 1825</p></div>
+      <div class="aura-hero-copy"><p class="aura-eyebrow">COAST apresenta · Residência à venda</p><h1 id="aura-title"><span>Casa</span><span>Aura.</span></h1><p class="aura-hero-description">Arquitetura que acolhe.<br>Espaços para viver por inteiro.</p><a class="aura-btn" href="#aura-contato">Conhecer a Casa Aura <svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg>
+</a><p class="aura-ref">5 SUÍTES &nbsp; / &nbsp; 404,51 M² CONSTRUÍDOS<br>RIVIERA MÓDULO 21 · BERTIOGA/SP<br>REFERÊNCIA 21E17 · CÓDIGO 1825</p></div>
       <div id="aura-filme" class="aura-hero-media"><video class="aura-hero-video" controls playsinline preload="metadata" poster="assets/hero.jpg" aria-label="Assistir ao vídeo completo da Casa Aura"><source src="assets/casa-aura.mp4" type="video/mp4">Seu navegador não suporta a reprodução deste vídeo.</video><span class="aura-image-label">CASA AURA / 21E17</span></div>
     </section>
-    <div class="aura-wrap"><div class="aura-facts" aria-label="Características principais"><div class="aura-fact"><strong>521,26 <small>m²</small></strong><span>Área do terreno</span></div><div class="aura-fact"><strong>404,51 <small>m²</small></strong><span>Área construída</span></div><div class="aura-fact"><strong>5 suítes</strong><span>Incluindo uma suíte térrea</span></div><div class="aura-fact"><strong>5 vagas</strong><span>De garagem</span></div></div></div>
+    <div class="aura-wrap"><div class="aura-facts" aria-label="Características principais"><div class="aura-fact"><svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" />
+  <path d="m14.5 12.5 2-2" />
+  <path d="m11.5 9.5 2-2" />
+  <path d="m8.5 6.5 2-2" />
+  <path d="m17.5 15.5 2-2" />
+</svg>
+<strong>521,26 <small>m²</small></strong><span>Área do terreno</span></div><div class="aura-fact"><svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+</svg>
+<strong>404,51 <small>m²</small></strong><span>Área construída</span></div><div class="aura-fact"><svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+  <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+  <path d="M12 4v6" />
+  <path d="M2 18h20" />
+</svg>
+<strong>5 suítes</strong><span>Incluindo uma suíte térrea</span></div><div class="aura-fact"><svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8" />
+  <path d="M7 14h.01" />
+  <path d="M17 14h.01" />
+  <rect width="18" height="8" x="3" y="10" rx="2" />
+  <path d="M5 18v2" />
+  <path d="M19 18v2" />
+</svg>
+<strong>5 vagas</strong><span>De garagem</span></div></div></div>
     <section id="aura-residencia" class="aura-wrap aura-section aura-intro"><div><p class="aura-eyebrow">Uma identidade própria</p><h2>O encontro entre<br>luz, espaço e bem-estar.</h2></div><div class="aura-prose"><p>Uma residência contemporânea com identidade arquitetônica única. Na Casa Aura, a iluminação natural e a integração dos ambientes dão espaço a uma forma mais confortável de viver.</p><p>Do pé-direito duplo à área verde nos fundos, cada ambiente convida a aproveitar a casa em diferentes momentos: receber, descansar e estar perto de quem importa.</p><div class="aura-credits"><div><small>Arquitetura</small><span>Casa Conceito</span></div><div><small>Execução</small><span>JWS Empreiteira</span></div></div></div></section>
     <section id="aura-ambientes" class="aura-wrap aura-section" style="padding-top:0"><div class="aura-gallery-head"><div><p class="aura-eyebrow">Por dentro da Casa Aura</p><h2>Ambientes que se conectam.</h2></div><p>Toque nas imagens para ampliar ↗</p></div><div class="aura-gallery">
       <button type="button" class="aura-gallery-tall" data-aura-photo="assets/living.jpg" data-aura-caption="Living integrado com pé-direito duplo" aria-label="Ampliar imagem do living"><figure><img src="assets/living.jpg" loading="lazy" width="1080" height="1920" alt="Salas integradas e pé-direito duplo da Casa Aura"><figcaption><span>01 / Living integrado</span><span aria-hidden="true">↗</span></figcaption></figure></button>
@@ -29,7 +241,21 @@
     <section class="aura-wrap aura-section aura-leisure"><img class="aura-leisure-photo" src="assets/piscina.jpg" width="1080" height="1920" loading="lazy" alt="Piscina da Casa Aura vista da área externa"><div><p class="aura-eyebrow">O lado de fora também é seu</p><h2>Dias de sol.<br>Tempo sem pressa.</h2><p class="aura-prose">Uma área externa para aproveitar a casa ao ar livre, entre a piscina, o espaço gourmet e o verde.</p><ul><li>Piscina de 38,72 m² com prainha e spa</li><li>Infraestrutura para aquecimento da piscina</li><li>Área gourmet externa</li><li>Ampla área verde com gramado nos fundos</li><li>Lavabo externo de apoio ao lazer</li></ul></div></section>
     <section class="aura-materials"><div class="aura-wrap aura-section"><p class="aura-eyebrow">Escolhas que fazem a diferença</p><h2>Texturas, materiais<br>e cuidado nos detalhes.</h2><div class="aura-brands"><div><small>Revestimentos</small><span>Portobello</span></div><div><small>Pedra natural</small><span>Moledo Branco</span></div><div><small>Quartzito</small><span>Taj Mahal</span></div><div><small>Eletrodomésticos</small><span>Crissair</span></div><div><small>Marcenaria</small><span>Todeschini</span></div><div><small>Marmoraria</small><span>Clark &amp; Clark</span></div></div></div></section>
     <section class="aura-wrap aura-section"><p class="aura-eyebrow">Mais do que ambientes</p><h2>Uma casa.<br>Muitas formas de viver.</h2><div class="aura-experiences"><article class="aura-experience"><img src="assets/gourmet.jpg" loading="lazy" width="1080" height="1920" alt="Área gourmet da Casa Aura"><div><p class="aura-eyebrow">01 / Estar junto</p><h3>Receber é um prazer.</h3><p>Da cozinha integrada ao gourmet externo, espaços para reunir as pessoas e prolongar as conversas.</p></div></article><article class="aura-experience"><img src="assets/banheira.jpg" loading="lazy" width="1080" height="1920" alt="Banheira de imersão da suíte master"><div><p class="aura-eyebrow">02 / Desacelerar</p><h3>O seu próprio refúgio.</h3><p>Suíte master com banheira de imersão. Um convite para encerrar o dia no seu ritmo.</p></div></article></div></section>
-    <section class="aura-wrap aura-section aura-location"><div><p class="aura-eyebrow">O endereço</p><h2>Riviera.<br>Seu lugar de voltar.</h2><p class="aura-prose" style="margin-top:25px">No Módulo 21 da Riviera de São Lourenço, em Bertioga/SP. Uma residência que combina espaços de convivência, privacidade e lazer em casa.</p><a class="aura-text-link" href="#aura-contato">Receber a localização e agendar uma visita ↗</a></div><div class="aura-location-card"><p class="aura-eyebrow">Riviera de São Lourenço</p><strong>Módulo 21</strong><p>Bertioga · Litoral de São Paulo<br>Casa Aura / Referência 21E17<br>Código do imóvel: 1825</p></div></section>
+    <section id="aura-localizacao" class="aura-wrap aura-section aura-location"><div><p class="aura-eyebrow">O endereço</p><h2>Riviera.<br>Seu lugar de voltar.</h2><p class="aura-prose" style="margin-top:25px">No Módulo 21 da Riviera de São Lourenço, em Bertioga/SP. Uma residência que combina espaços de convivência, privacidade e lazer em casa.</p><a class="aura-text-link" href="#aura-contato">Receber a localização e agendar uma visita ↗</a></div><div class="aura-location-card"><p class="aura-eyebrow">Riviera de São Lourenço</p><div class="aura-location-mark"><svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+  <circle cx="12" cy="10" r="3" />
+</svg>
+</div><strong>Módulo 21</strong><p>Bertioga · Litoral de São Paulo<br>Casa Aura / Referência 21E17<br>Código do imóvel: 1825</p></div></section>
     <section class="aura-wrap aura-section aura-faq"><p class="aura-eyebrow">Antes da visita</p><h2>Conheça os detalhes.</h2><details><summary>Quais são as condições de negociação?</summary><p>O valor anunciado é de R$ 9.200.000,00. O proprietário analisa propostas com permuta e aceita parcelamento direto. As condições devem ser confirmadas com a equipe COAST.</p></details><details><summary>A casa tem suíte no térreo?</summary><p>Sim. São cinco suítes no total, incluindo uma suíte térrea e uma suíte master com banheira de imersão.</p></details><details><summary>Como é a área de lazer?</summary><p>A casa possui piscina de 38,72 m² com prainha, spa e infraestrutura para aquecimento, área gourmet externa, gramado nos fundos e ambiente de jogos com mesa de sinuca.</p></details><details><summary>Como agendar uma visita?</summary><p>Preencha o formulário abaixo com seu nome e WhatsApp. A equipe COAST entrará em contato para esclarecer dúvidas e combinar a visita conforme a disponibilidade.</p></details></section>
     <section id="aura-contato" class="aura-contact"><div class="aura-wrap aura-section aura-contact-grid"><div><p class="aura-eyebrow">Casa Aura · Referência 21E17</p><h2>Seu próximo capítulo<br>pode começar aqui.</h2><p class="aura-price">R$ 9.200.000,00</p><p class="aura-terms">Analisa proposta com permuta.<br>Aceita parcelamento direto.</p><p class="aura-capture"><span>Captação</span>Camila Siqueira</p></div><div class="aura-form-panel"><h3>Vamos conhecer a Casa Aura?</h3><p class="aura-form-description">Deixe seu contato para receber mais informações e combinar uma visita com a equipe COAST.</p><div id="aura-native-form-slot"><div class="aura-native-form"><form id="casa-aura-21e17" name="casa-aura" method="POST" action="/obrigado.html" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="casa-aura"><input type="hidden" name="imovel" value="Casa Aura"><input type="hidden" name="referencia" value="21E17"><input type="hidden" name="codigo_imovel" value="1825"><input type="hidden" name="url_imovel" value="https://imobiliariacoastriviera.com.br/imovel/casa-a-venda-5-quartos-riviera-modulo-21-bertioga-sp-id-1825"><input type="hidden" name="origem" value="Landing Casa Aura — COAST"><input type="hidden" name="mensagem" value="Interesse na Casa Aura, referência 21E17, código 1825."><input type="hidden" name="pagina" value=""><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value=""><p hidden><label>Não preencha este campo: <input name="bot-field" autocomplete="off"></label></p><label for="aura-nome">Nome completo *</label><input id="aura-nome" name="nome" autocomplete="name" placeholder="Como podemos chamar você?" required maxlength="120">
@@ -40,7 +266,21 @@
 </form></div></div><p class="aura-privacy">Ao enviar, você solicita contato da COAST sobre a Casa Aura. Seus dados serão utilizados para atender essa solicitação.</p></div></div></section>
   </main>
   <footer class="aura-wrap aura-footer"><img src="assets/coast-logo.png" alt="COAST Riviera Imóveis" width="80" height="62" loading="lazy"><p>Casa Aura · 21E17 · Código 1825<br><a href="https://imobiliariacoastriviera.com.br/imovel/casa-a-venda-5-quartos-riviera-modulo-21-bertioga-sp-id-1825" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;text-underline-offset:3px">Ver anúncio completo no site da COAST ↗</a><br>Valores, disponibilidade e condições de negociação sujeitos à confirmação.<br>Imagens extraídas do vídeo de apresentação do imóvel.</p></footer>
-  <div class="aura-mobile-cta"><div><small>CASA AURA / 21E17</small><strong>R$ 9.200.000,00</strong></div><a class="aura-btn" href="#aura-contato">Agendar visita <span class="aura-arrow" aria-hidden="true">↗</span></a></div>
+  <div class="aura-mobile-cta"><div><small>CASA AURA / 21E17</small><strong>R$ 9.200.000,00</strong></div><a class="aura-btn" href="#aura-contato">Agendar visita <svg class="aura-icon" aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg>
+</a></div>
   <dialog class="aura-lightbox" aria-label="Imagem ampliada do imóvel"><button type="button" class="aura-lightbox-close">Fechar ×</button><img alt=""><p class="aura-lightbox-caption"></p></dialog>
 </div>
 
