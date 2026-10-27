@@ -67,6 +67,34 @@
   if (nativeForm && slot && !slot.contains(nativeForm)) slot.replaceChildren(nativeForm);
   const form = slot?.querySelector('form');
   if (form) {
+    // Só navega após o servidor aceitar o formulário; falhas mantêm os dados.
+    const status = document.createElement('p');
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+    status.style.cssText = 'margin-top:16px;font-size:13px;line-height:1.6';
+    form.append(status);
+    let sending = false;
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (sending) return;
+      sending = true;
+      const button = form.querySelector('[type="submit"]');
+      button.disabled = true;
+      status.textContent = 'Enviando sua solicitação…';
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+          body: new URLSearchParams(new FormData(form)).toString()
+        });
+        if (!response.ok) throw new Error('Envio não aceito');
+        location.assign('/obrigado');
+      } catch {
+        status.textContent = 'Não foi possível enviar sua solicitação agora. Seus dados continuam preenchidos. Tente novamente em alguns instantes.';
+        button.disabled = false;
+        sending = false;
+      }
+    });
     const params = new URLSearchParams(location.search);
     const urlImovel = 'https://imobiliariacoastriviera.com.br/imovel/casa-a-venda-5-quartos-riviera-modulo-21-bertioga-sp-id-1825';
     const meta = {
